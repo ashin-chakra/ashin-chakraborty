@@ -1,0 +1,1378 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ashin Chakraborty | Economics & Public Policy</title>
+  <meta name="description" content="Academic portfolio of Ashin Chakraborty — aspiring PhD student in Economics and Public Policy, working on political economy, inequality, and representation." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Ashin Chakraborty | Economics & Public Policy" />
+  <meta property="og:description" content="Aspiring PhD student working on political economy, inequality, representation, and large-scale survey research in India." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/profile.png" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@Ashin_econ" />
+  <meta name="twitter:title" content="Ashin Chakraborty | Economics & Public Policy" />
+  <meta name="twitter:description" content="Aspiring PhD student working on political economy, inequality, representation, and large-scale survey research in India." />
+  <meta name="twitter:image" content="assets/profile.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:opsz,wght@14..32,300..800&display=swap" rel="stylesheet">
+
+  <style>
+    /* ===== DESIGN TOKENS ===== */
+    :root {
+      --ink: #1a1f2e;
+      --navy: #0d2137;
+      --blue: #1a6b8a;
+      --teal: #1d7a8c;
+      --accent: #2a7f62;
+      --accent-light: #eef7f3;
+      --cyan: #e4f2f5;
+      --mist: #f6f9fb;
+      --paper: #faf9f7;
+      --white: #ffffff;
+      --sand: #e7d8b7;
+      --gold: #2a7f62;
+      --muted: #5e6a7a;
+      --line: #dce4eb;
+      --shadow: 0 24px 64px rgba(13, 33, 55, .10);
+      --shadow-soft: 0 8px 28px rgba(13, 33, 55, .06);
+      --radius: 20px;
+      --max: 1140px;
+      --serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
+      --sans: 'Inter', system-ui, -apple-system, sans-serif;
+      --transition: .3s cubic-bezier(.4, 0, .2, 1);
+    }
+
+    /* ===== DARK MODE (toggled via .dark class on html) ===== */
+    html.dark {
+      --ink: #e4e8ef;
+      --navy: #e8edf3;
+      --blue: #5db8d5;
+      --teal: #4cc4d4;
+      --accent: #3da87a;
+      --accent-light: #1a2a22;
+      --cyan: #1a2a30;
+      --mist: #141a22;
+      --paper: #0f1419;
+      --white: #1a2028;
+      --muted: #8e99ab;
+      --line: #2a3344;
+      --shadow: 0 24px 64px rgba(0, 0, 0, .35);
+      --shadow-soft: 0 8px 28px rgba(0, 0, 0, .2);
+    }
+    html.dark body { background: #0f1419; }
+    html.dark .topbar { background: rgba(15, 20, 25, .92); }
+    html.dark .brand { color: #ffffff; }
+    html.dark .brand small { color: #8e99ab; }
+    html.dark .portrait-frame { background: #1a2028; }
+    html.dark .portrait-frame img { filter: saturate(.9) brightness(.95); }
+    html.dark .btn.primary { background: #3da87a; color: #fff; border-color: #3da87a; }
+    html.dark .btn.primary:hover { background: #338f68; }
+    html.dark .btn.secondary { background: #1e2a36; color: #5db8d5; border-color: #2a3a4e; }
+    html.dark .btn.gold { background: #1a2a22; color: #5dc49a; border-color: #2a4a38; }
+    html.dark .metric { background: #1a2028; }
+    html.dark .card { background: #1a2028; }
+    html.dark .item { background: #1a2028; }
+    html.dark .panel { background: linear-gradient(135deg, #14324a, #1c4a66); }
+    html.dark .panel h3 { color: #ffffff; }
+    html.dark .panel p { color: #c0d8ea; }
+    html.dark .pill { background: #1a2028; }
+    html.dark .pill.strong { background: #162a33; }
+    html.dark .pill.gold { background: #1a2a22; }
+    html.dark .asset-note { background: #1a2028; border-color: #2a3344; }
+    html.dark .quick { background: linear-gradient(135deg, #14324a, #1c4a66); border: 1px solid #2a4a60; }
+    html.dark .quick strong { color: #ffffff; }
+    html.dark .media-link { background: #1a2028; }
+    html.dark .footer { background: #080c10; }
+    html.dark .cv-preview { background: #1a2028; }
+    html.dark .contact-form { background: #1a2028; }
+    html.dark .contact-form input,
+    html.dark .contact-form textarea { background: #141a22; border-color: #2a3344; color: #e4e8ef; }
+    html.dark .hamburger span { background: #e4e8ef; }
+    html.dark .mobile-nav { background: rgba(15, 20, 25, .97); }
+    html.dark .mobile-nav a { color: #e4e8ef; }
+
+    /* Theme toggle button */
+    .theme-toggle {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      border: 1px solid var(--line);
+      background: var(--white);
+      cursor: pointer;
+      color: var(--muted);
+      transition: all var(--transition);
+      flex-shrink: 0;
+    }
+    .theme-toggle:hover { color: var(--accent); border-color: var(--accent); }
+    .theme-toggle svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .theme-toggle .icon-moon { display: block; }
+    .theme-toggle .icon-sun { display: none; }
+    html.dark .theme-toggle .icon-moon { display: none; }
+    html.dark .theme-toggle .icon-sun { display: block; }
+
+    /* ===== RESET & BASE ===== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+
+    body {
+      font-family: var(--sans);
+      color: var(--ink);
+      background: var(--paper);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: var(--blue); text-decoration: none; transition: color var(--transition); }
+    a:hover { color: var(--accent); }
+
+    img { max-width: 100%; display: block; }
+
+    .container {
+      width: min(var(--max), calc(100% - 40px));
+      margin-inline: auto;
+    }
+
+    /* ===== NAVIGATION ===== */
+    .topbar {
+      position: sticky;
+      top: 0;
+      background: rgba(250, 248, 244, .88);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--line);
+      z-index: 100;
+    }
+
+    nav {
+      height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .brand {
+      font-family: var(--serif);
+      font-weight: 400;
+      font-size: 1.2rem;
+      color: var(--navy);
+      letter-spacing: -.01em;
+    }
+
+    .brand small {
+      font-family: var(--sans);
+      font-size: .72rem;
+      font-weight: 500;
+      color: var(--muted);
+      margin-left: 10px;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+    }
+
+    .navlinks {
+      display: flex;
+      gap: 6px;
+      font-size: .88rem;
+      font-weight: 500;
+    }
+
+    .navlinks a {
+      color: var(--muted);
+      padding: 6px 12px;
+      border-radius: 8px;
+      transition: all var(--transition);
+      position: relative;
+    }
+
+    .navlinks a:hover {
+      color: var(--ink);
+      background: var(--cyan);
+    }
+
+    .navlinks a.active {
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .navlinks a.active::after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 12px;
+      right: 12px;
+      height: 2px;
+      background: var(--accent);
+      border-radius: 2px;
+    }
+
+    /* Hamburger */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+      z-index: 110;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--ink);
+      border-radius: 2px;
+      transition: all var(--transition);
+    }
+
+    .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+    /* Mobile nav overlay */
+    .mobile-nav {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(250, 248, 244, .97);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      z-index: 99;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .mobile-nav.open { display: flex; }
+
+    .mobile-nav a {
+      font-family: var(--serif);
+      font-size: 1.8rem;
+      color: var(--navy);
+      padding: 10px 28px;
+      border-radius: 12px;
+      transition: all var(--transition);
+    }
+
+    .mobile-nav a:hover { background: var(--cyan); color: var(--accent); }
+
+    /* Social icons in nav */
+    .nav-social {
+      display: flex;
+      gap: 8px;
+      margin-left: 8px;
+      padding-left: 14px;
+      border-left: 1px solid var(--line);
+    }
+
+    .nav-social a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      color: var(--muted);
+      transition: all var(--transition);
+    }
+
+    .nav-social a:hover { color: var(--accent); background: var(--accent-light); }
+
+    .nav-social svg { width: 16px; height: 16px; fill: currentColor; }
+
+    /* ===== HERO ===== */
+    .hero {
+      padding: 80px 0 40px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -120px;
+      right: -80px;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(42, 127, 98, .08), transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -80px;
+      left: -60px;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(29, 122, 140, .07), transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 60px;
+      align-items: center;
+      position: relative;
+    }
+
+    .eyebrow {
+      font-family: var(--sans);
+      text-transform: uppercase;
+      letter-spacing: .2em;
+      font-size: .72rem;
+      font-weight: 600;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      font-family: var(--serif);
+      color: var(--navy);
+      font-size: clamp(2.8rem, 6.5vw, 5.2rem);
+      line-height: 1.0;
+      margin: 0 0 20px;
+      letter-spacing: -.03em;
+      font-weight: 400;
+    }
+
+    .subtitle {
+      font-size: 1.15rem;
+      color: var(--blue);
+      font-weight: 500;
+      line-height: 1.5;
+      margin: 0 0 16px;
+    }
+
+    .lead {
+      font-size: 1rem;
+      color: var(--muted);
+      max-width: 620px;
+      line-height: 1.7;
+      margin-bottom: 10px;
+    }
+
+    /* Portrait */
+    .portrait-card { position: relative; }
+
+    .portrait-frame {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      padding: 10px;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .portrait-frame::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 40%;
+      background: linear-gradient(to top, rgba(13, 33, 55, .06), transparent);
+      pointer-events: none;
+      border-radius: 0 0 22px 22px;
+    }
+
+    .portrait-frame img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: 22px;
+      filter: saturate(.92) contrast(1.02);
+    }
+
+    .portrait-fallback {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      background: linear-gradient(135deg, var(--cyan), var(--accent-light));
+      border-radius: 22px;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--serif);
+      font-size: 4rem;
+      color: var(--accent);
+    }
+
+    .quick {
+      margin-top: 16px;
+      background: linear-gradient(135deg, var(--navy), #153a55);
+      color: #dce8f0;
+      border-radius: 18px;
+      padding: 18px 20px;
+      font-size: .9rem;
+      box-shadow: var(--shadow-soft);
+      line-height: 1.6;
+    }
+
+    .quick strong { color: #e8f2f8; }
+
+    /* Buttons */
+    .button-row { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 28px; }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 12px;
+      padding: 12px 22px;
+      border: 1px solid var(--line);
+      font-weight: 600;
+      font-size: .9rem;
+      font-family: var(--sans);
+      cursor: pointer;
+      transition: all var(--transition);
+      text-decoration: none;
+    }
+
+    .btn:hover { transform: translateY(-1px); box-shadow: var(--shadow-soft); }
+
+    .btn.primary { background: var(--navy); color: #fff; border-color: var(--navy); }
+    .btn.primary:hover { background: #1a3a54; }
+    .btn.secondary { background: var(--white); color: var(--blue); }
+    .btn.gold { background: var(--accent-light); color: var(--accent); border-color: rgba(42, 127, 98, .25); }
+
+    /* ===== METRICS ===== */
+    .metrics { padding: 10px 0 60px; }
+
+    .metric-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 12px;
+    }
+
+    .metric {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: var(--shadow-soft);
+      position: relative;
+      overflow: hidden;
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+
+    .metric:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+
+    .metric::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 3px;
+      height: 100%;
+      background: var(--accent);
+      border-radius: 0 3px 3px 0;
+    }
+
+    .metric b {
+      display: block;
+      color: var(--navy);
+      font-size: 1.45rem;
+      line-height: 1.1;
+      font-family: var(--serif);
+      font-weight: 400;
+    }
+
+    .metric span {
+      font-size: .8rem;
+      color: var(--muted);
+      font-weight: 500;
+      margin-top: 4px;
+      display: block;
+    }
+
+    /* ===== SECTIONS ===== */
+    section {
+      padding: 72px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 28px;
+      margin-bottom: 36px;
+    }
+
+    .section-head h2 {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.05;
+      color: var(--navy);
+      margin: 0;
+      letter-spacing: -.03em;
+      font-weight: 400;
+    }
+
+    .section-head p {
+      max-width: 540px;
+      color: var(--muted);
+      margin: 0;
+      font-size: .95rem;
+    }
+
+    .kicker {
+      color: var(--accent);
+      font-size: .72rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: .16em;
+      margin-bottom: 6px;
+    }
+
+    /* ===== CARDS ===== */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: var(--shadow-soft);
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+
+    .card:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+
+    .card.feature {
+      grid-column: span 2;
+      background: var(--white);
+      padding: 30px;
+      border-left: 3px solid var(--accent);
+    }
+
+    .tag {
+      display: inline-block;
+      font-size: .68rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: var(--teal);
+      background: var(--cyan);
+      border: 1px solid rgba(29, 122, 140, .15);
+      border-radius: 6px;
+      padding: 4px 8px;
+      margin-bottom: 12px;
+    }
+
+    .tag.gold {
+      color: var(--accent);
+      background: var(--accent-light);
+      border-color: rgba(42, 127, 98, .2);
+    }
+
+    .card h3 {
+      font-family: var(--serif);
+      color: var(--navy);
+      font-size: 1.35rem;
+      line-height: 1.2;
+      margin: 0 0 8px;
+      letter-spacing: -.01em;
+      font-weight: 400;
+    }
+
+    .card.feature h3 { font-size: clamp(1.5rem, 2.5vw, 2rem); }
+
+    .card p { color: var(--muted); margin: 0 0 14px; font-size: .94rem; }
+
+    .meta {
+      font-size: .88rem;
+      color: var(--muted);
+      border-top: 1px solid var(--line);
+      padding-top: 12px;
+      margin-top: 12px;
+    }
+
+    .links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+
+    .pill {
+      font-size: .82rem;
+      border: 1px solid var(--line);
+      background: var(--white);
+      border-radius: 8px;
+      padding: 6px 12px;
+      font-weight: 600;
+      transition: all var(--transition);
+      text-decoration: none;
+    }
+
+    .pill:hover { border-color: var(--blue); color: var(--blue); background: var(--cyan); }
+
+    .pill.strong { border-color: rgba(29, 122, 140, .3); background: var(--cyan); color: var(--teal); }
+    .pill.gold { border-color: rgba(42, 127, 98, .25); background: var(--accent-light); color: var(--accent); }
+
+    /* ===== SPLIT LAYOUT ===== */
+    .split {
+      display: grid;
+      grid-template-columns: .85fr 1.15fr;
+      gap: 24px;
+    }
+
+    .panel {
+      background: linear-gradient(135deg, var(--navy), #153a55);
+      color: #fff;
+      border-radius: var(--radius);
+      padding: 32px;
+      box-shadow: var(--shadow);
+    }
+
+    .panel h3 {
+      font-family: var(--serif);
+      font-size: 1.8rem;
+      margin: 0 0 12px;
+      font-weight: 400;
+    }
+
+    .panel p { color: #c5d8e6; }
+
+    .list { display: grid; gap: 12px; }
+
+    .item {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 18px 20px;
+      box-shadow: var(--shadow-soft);
+      transition: transform var(--transition);
+    }
+
+    .item:hover { transform: translateX(4px); }
+
+    .item h4 { margin: 0 0 4px; color: var(--navy); font-size: .95rem; font-weight: 600; }
+    .item p { margin: 0; color: var(--muted); font-size: .9rem; }
+
+    /* ===== PAPERS ===== */
+    .paper {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 16px;
+      align-items: start;
+      border-bottom: 1px solid var(--line);
+      padding: 20px 0;
+    }
+
+    .paper:first-of-type { padding-top: 0; }
+
+    .paper h3 {
+      margin: 0;
+      color: var(--navy);
+      font-family: var(--serif);
+      font-size: 1.1rem;
+      font-weight: 400;
+    }
+
+    .paper p { margin: 5px 0 0; color: var(--muted); font-size: .9rem; }
+
+    .status {
+      white-space: nowrap;
+      border: 1px solid rgba(29, 122, 140, .2);
+      background: var(--cyan);
+      border-radius: 8px;
+      padding: 5px 10px;
+      font-size: .72rem;
+      font-weight: 600;
+      color: var(--teal);
+      text-transform: uppercase;
+      letter-spacing: .06em;
+    }
+
+    /* ===== WRITING & MEDIA GRIDS ===== */
+    .writing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .media-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .subsection { margin-top: 36px; }
+    .subsection:first-of-type { margin-top: 0; }
+
+    .subsection-title {
+      font-family: var(--serif);
+      color: var(--navy);
+      font-size: 1.4rem;
+      line-height: 1.15;
+      margin: 0 0 16px;
+      font-weight: 400;
+    }
+
+    /* ===== CV PREVIEW ===== */
+    .cv-preview {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 32px;
+      box-shadow: var(--shadow-soft);
+      margin-top: 24px;
+    }
+
+    .cv-preview h3 {
+      font-family: var(--serif);
+      font-size: 1.5rem;
+      color: var(--navy);
+      margin-bottom: 20px;
+      font-weight: 400;
+    }
+
+    .cv-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .cv-block h4 {
+      font-size: .72rem;
+      text-transform: uppercase;
+      letter-spacing: .14em;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .cv-block p {
+      color: var(--muted);
+      font-size: .9rem;
+      line-height: 1.6;
+    }
+
+    .cv-block p strong { color: var(--ink); }
+
+    /* ===== CONTACT FORM ===== */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .contact-info-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .contact-form {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 28px;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .contact-form h3 {
+      font-family: var(--serif);
+      font-size: 1.3rem;
+      color: var(--navy);
+      margin-bottom: 16px;
+      font-weight: 400;
+    }
+
+    .form-group { margin-bottom: 14px; }
+
+    .form-group label {
+      display: block;
+      font-size: .8rem;
+      font-weight: 600;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      margin-bottom: 6px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 10px 14px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      font-family: var(--sans);
+      font-size: .9rem;
+      color: var(--ink);
+      background: var(--mist);
+      transition: border-color var(--transition);
+      outline: none;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      border-color: var(--accent);
+    }
+
+    .contact-form textarea { resize: vertical; min-height: 100px; }
+
+    .contact-form .btn { width: 100%; margin-top: 4px; }
+
+    /* ===== ASSET NOTE ===== */
+    .asset-note {
+      background: var(--white);
+      border: 1px dashed var(--line);
+      border-radius: var(--radius);
+      padding: 24px;
+      color: var(--muted);
+      font-size: .92rem;
+    }
+
+    .asset-note strong { color: var(--ink); }
+    .asset-note ul { margin: .5rem 0 0 1.2rem; }
+    .asset-note li { margin-bottom: 4px; }
+
+    /* ===== FOOTER ===== */
+    .footer {
+      padding: 40px 0;
+      background: var(--navy);
+      color: #e0eaf2;
+    }
+
+    .footer a { color: #a0c4da; }
+    .footer a:hover { color: #fff; }
+
+    .footer-grid {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .footer-brand { font-family: var(--serif); font-size: 1.1rem; }
+
+    .footer-sub { font-size: .82rem; color: #8aa8be; margin-top: 4px; }
+
+    .footer-right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .footer-social {
+      display: flex;
+      gap: 8px;
+    }
+
+    .footer-social a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 34px;
+      height: 34px;
+      border-radius: 8px;
+      border: 1px solid rgba(255,255,255,.12);
+      transition: all var(--transition);
+    }
+
+    .footer-social a:hover {
+      background: rgba(255,255,255,.1);
+      border-color: rgba(255,255,255,.3);
+    }
+
+    .footer-social svg { width: 15px; height: 15px; fill: currentColor; }
+
+    .footer-copy { font-size: .82rem; color: #8aa8be; }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 900px) {
+      .hero-grid, .split, .contact-grid { grid-template-columns: 1fr; }
+      .metric-grid { grid-template-columns: repeat(2, 1fr); }
+      .cards, .writing-grid, .media-grid { grid-template-columns: 1fr; }
+      .card.feature { grid-column: auto; }
+      .section-head { display: block; }
+      .section-head p { margin-top: 8px; }
+      .portrait-card { max-width: 380px; margin: 0 auto; }
+      .navlinks, .nav-social { display: none; }
+      .hamburger { display: flex; }
+      .cv-grid { grid-template-columns: 1fr; }
+      .contact-info-cards { grid-template-columns: 1fr; }
+      .paper { grid-template-columns: 1fr; gap: 8px; }
+    }
+
+    @media (max-width: 520px) {
+      .container { width: min(100% - 24px, var(--max)); }
+      .metric-grid { grid-template-columns: 1fr; }
+      .hero { padding-top: 48px; }
+      nav { height: 60px; }
+      .brand small { display: none; }
+      .contact-grid { gap: 16px; }
+    }
+
+    /* ===== ANIMATIONS ===== */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero-grid > * {
+      animation: fadeUp .6s ease-out both;
+    }
+
+    .hero-grid > :nth-child(2) {
+      animation-delay: .15s;
+    }
+
+    .metric {
+      animation: fadeUp .5s ease-out both;
+    }
+
+    .metric:nth-child(2) { animation-delay: .05s; }
+    .metric:nth-child(3) { animation-delay: .1s; }
+    .metric:nth-child(4) { animation-delay: .15s; }
+    .metric:nth-child(5) { animation-delay: .2s; }
+  </style>
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <header class="topbar">
+    <div class="container">
+      <nav aria-label="Primary navigation">
+        <a class="brand" href="#home">Ashin Chakraborty <small>Econ & Policy</small></a>
+        <div class="navlinks" id="navlinks">
+          <a href="#about">About</a>
+          <a href="#research">Research</a>
+          <a href="#papers">Papers</a>
+          <a href="#reports">Reports</a>
+          <a href="#data">Data</a>
+          <a href="#media">Media</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="nav-social">
+          <a href="https://x.com/Ashin_econ" target="_blank" rel="noopener" aria-label="X / Twitter">
+            <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/ashin-chakraborty/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+        </div>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+          <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile nav overlay -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#about" onclick="closeMobile()">About</a>
+    <a href="#research" onclick="closeMobile()">Research</a>
+    <a href="#papers" onclick="closeMobile()">Papers</a>
+    <a href="#reports" onclick="closeMobile()">Reports</a>
+    <a href="#data" onclick="closeMobile()">Data</a>
+    <a href="#media" onclick="closeMobile()">Media</a>
+    <a href="#contact" onclick="closeMobile()">Contact</a>
+  </div>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main id="home">
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Aspiring PhD Student</div>
+          <h1>Ashin Chakraborty</h1>
+          <p class="subtitle">Economics and Public Policy · Political Economy · Inequality · Representation · Survey Research</p>
+          <p class="lead">I am an aspiring PhD student in Economics and Public Policy, with research interests spanning political economy, labour economics, gender economics, social economics, representation, stratification economics, migration, public service delivery, and primary survey-based policy research.</p>
+          <p class="lead">My work is motivated by questions of inequality, inclusion, and institutional design. I am especially interested in using large-scale administrative and survey data to understand how policies shape social and economic outcomes.</p>
+          <div class="button-row">
+            <a class="btn primary" href="#cv-section">View CV</a>
+            <a class="btn secondary" href="#papers">Papers</a>
+            <a class="btn gold" href="https://sabar-institute.github.io/sir/">Open electoral data</a>
+          </div>
+        </div>
+        <aside class="portrait-card">
+          <div class="portrait-frame">
+            <img src="assets/profile.png" alt="Portrait of Ashin Chakraborty — researcher in economics and public policy based in Kolkata" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="portrait-fallback">AC</div>
+          </div>
+          <div class="quick"><strong>Current focus:</strong> empirical political economy, labour, gender, social stratification, migration, public service delivery, and primary survey-based policy research.</div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Metrics -->
+    <div class="container metrics" aria-label="Selected research scale indicators">
+      <div class="metric-grid">
+        <div class="metric"><b>150M+</b><span>voter records structured</span></div>
+        <div class="metric"><b>~80k</b><span>polling booths covered</span></div>
+        <div class="metric"><b>7,500+</b><span>migration households</span></div>
+        <div class="metric"><b>7,578</b><span>public-toilet survey respondents</span></div>
+        <div class="metric"><b>4,311</b><span>reading-habits samples</span></div>
+      </div>
+    </div>
+
+    <!-- About -->
+    <section id="about">
+      <div class="container split">
+        <div class="panel">
+          <div class="kicker">Academic profile</div>
+          <h3>About</h3>
+          <p>I am preparing for PhD applications in Economics and Public Policy, with an interest in empirical work that connects institutions, inequality, social identity, and policy design.</p>
+        </div>
+        <div class="list">
+          <div class="item"><h4>Research motivation</h4><p>My work is motivated by questions of inequality, inclusion, and institutional design.</p></div>
+          <div class="item"><h4>Data experience</h4><p>I work with administrative records, digitized public data, machine-readable datasets, nationally representative unit-level surveys such as NSS and NFHS, and primary field surveys.</p></div>
+          <div class="item"><h4>Technical toolkit</h4><p>STATA, R, KoboToolBox, Python-based machine learning, data visualization, data cleaning, and AI-assisted research workflows using Claude Code and Codex.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Research -->
+    <section id="research">
+      <div class="container">
+        <div class="section-head">
+          <div><div class="kicker">Research agenda</div><h2>Research</h2></div>
+          <p>Projects combining administrative data, open data infrastructure, primary surveys, public reports, and policy-facing communication.</p>
+        </div>
+        <div class="cards">
+          <article class="card feature">
+            <span class="tag">Electoral integrity and democratic participation</span>
+            <h3>Gender, Social Identity, and Voter Deletion: Evidence from the 2026 Special Intensive Revision of Electoral Rolls in West Bengal</h3>
+            <p>A large-scale empirical project examining voter exclusions during the 2026 Special Intensive Revision of electoral rolls across 294 Assembly constituencies and approximately 80,000 polling booths in West Bengal. The work involved digitizing, structuring, and analyzing large-scale Electoral Commission records, including 150M+ individual voter records.</p>
+            <div class="meta">Methods: administrative data digitization, web scraping, data cleaning, machine-readable electoral records, gender/religion/caste classification, constituency- and booth-level analysis.</div>
+            <div class="links">
+              <a class="pill strong" href="https://sabar-institute.github.io/sir/">Open SIR dataset</a>
+              <a class="pill strong" href="https://sabar-institute.github.io/maps">View maps</a>
+              <a class="pill strong" href="https://sabar-institute.github.io/election2026/roundwise_results/">Roundwise results</a>
+              <a class="pill gold" href="https://debrajray.com///wp-content/uploads/2026/05/SIR2026.pdf">Debraj Ray working paper</a>
+              <a class="pill gold" href="https://www.4numberplatform.com/?p=41492">Dr Subhasish Dey article</a>
+              <a class="pill" href="https://www.newslaundry.com/2026/04/12/we-are-chitragupta-of-the-bengal-sir-meet-the-sabar-team-tracking-deleted-voters">NewsLaundry profile</a>
+            </div>
+          </article>
+          <article class="card">
+            <span class="tag">Representation and institutions</span>
+            <h3>Diversity and Representation in the West Bengal Legislative Assembly</h3>
+            <p>Co-authored report using RTI data to examine gender, caste, and religious representation in Assembly committees and chairperson positions.</p>
+            <div class="meta">Dataset: 42 committees, 256 unique members, 38 chairpersons.</div>
+            <div class="links"><a class="pill" href="assets/Assembly_Representation_Report.pdf">Read report</a><a class="pill" href="https://www.thehindu.com/data/minorities-have-been-underrepresented-in-bengal-assembly/article70886066.ece">The Hindu</a><a class="pill" href="https://behanbox.com/2026/04/27/numbers-without-influence-women-and-power-in-west-bengals-assembly/">BehanBox</a></div>
+          </article>
+          <article class="card">
+            <span class="tag">Public service delivery</span>
+            <h3>Status of Public Toilets for Women and Trans/Queer People in Kolkata</h3>
+            <p>Executive brief with Azad Foundation on gendered access to urban sanitation, safety, mobility, and work outside the home.</p>
+            <div class="meta">Sample: 7,578 cis women and 38 trans/queer respondents.</div>
+            <div class="links"><a class="pill" href="assets/Public_Toilet_Executive_Brief.pdf">Read executive brief</a></div>
+          </article>
+          <article class="card">
+            <span class="tag">Migration, labour, and education</span>
+            <h3>The Reality of Migration from West Bengal</h3>
+            <p>Primary survey-based public evidence project on migration, distress mobility, discrimination, remittances, and education disruption in Panskura.</p>
+            <div class="meta">Sample: 7,500+ migrant households and returnees; 100+ student surveyors.</div>
+            <div class="links"><a class="pill" href="assets/Migration_Study.pdf">View migration study</a></div>
+          </article>
+          <article class="card">
+            <span class="tag">Reading, education, and human capital</span>
+            <h3>Reading Habits Study</h3>
+            <p>A structured primary survey on reading habits, social media use, gender, age, social group, religion, and digital distraction.</p>
+            <div class="meta">Sample: 4,311 offline responses.</div>
+            <div class="links"><a class="pill" href="assets/Reading_Habits_Brochure.pdf">View brochure</a></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Papers -->
+    <section id="papers">
+      <div class="container">
+        <div class="section-head"><div><div class="kicker">Manuscripts and essays</div><h2>Papers</h2></div><p>Academic papers, manuscripts, and research essays listed from my CV and current research agenda.</p></div>
+        <div class="paper"><div><h3>Gender, Social Identity, and Voter Deletion: Evidence from the 2026 Special Intensive Revision of Electoral Rolls in West Bengal</h3><p>With Sabir Ahamed and Souptik Halder. Political economy, electoral integrity, representation, and social identity.</p></div><span class="status">In progress</span></div>
+        <div class="paper"><div><h3>Raiders of the Lost Female Workforce: Lakshmir Bhandar and the Backward Bending Labor Supply Curve</h3><p>Gender economics, labour economics, unconditional cash transfers, women's labour supply, and primary survey evidence.</p></div><span class="status">Paper</span></div>
+        <div class="paper"><div><h3>Rethinking the Impact of the Singur Movement on Industrialization in West Bengal</h3><p>Political economy of industrialization, development, qualitative and quantitative evidence, and long-run state economic change.</p></div><span class="status">Case study</span></div>
+        <div class="paper"><div><h3>The Green Gatsby: Illuminating the Influence of Human Development on Sustainable Futures</h3><p>Development economics, sustainability, human development, large datasets, and regression analysis.</p></div><span class="status">Paper</span></div>
+        <div class="paper"><div><h3>The Missing Educated Women from Labor Force in India: A Study on Access to Vocational Training</h3><p>Labour economics, gender economics, vocational training, and nationally representative datasets.</p></div><span class="status">Article / paper</span></div>
+        <div class="paper"><div><h3>Macro-Stabilization and Policy Reforms in India: Some Reflections on Health Outcomes in the Post-COVID Era</h3><p>Health economics, public policy, COVID-19 vaccination benefits, and ICDS.</p></div><span class="status">Paper</span></div>
+      </div>
+    </section>
+
+    <!-- Reports -->
+    <section id="reports">
+      <div class="container">
+        <div class="section-head"><div><div class="kicker">Evidence briefs</div><h2>Reports and briefs</h2></div><p>Field-facing and public-policy-facing outputs based on surveys, RTI data, administrative records, and data visualization.</p></div>
+        <div class="cards">
+          <article class="card"><h3>Public Toilets Executive Brief</h3><p>Status of Public Toilets for Women and Trans/Queer People in Kolkata.</p><div class="links"><a class="pill" href="assets/Public_Toilet_Executive_Brief.pdf">PDF</a></div></article>
+          <article class="card"><h3>Migration Study</h3><p>The Reality of Migration from West Bengal, based on a Panskura primary survey.</p><div class="links"><a class="pill" href="assets/Migration_Study.pdf">PDF</a></div></article>
+          <article class="card"><h3>Reading Habits Study</h3><p>Survey on reading habits in the age of digital distraction.</p><div class="links"><a class="pill" href="assets/Reading_Habits_Brochure.pdf">PDF</a></div></article>
+          <article class="card"><h3>Assembly Representation Report</h3><p>Diversity and representation in the Seventeenth West Bengal Legislative Assembly.</p><div class="links"><a class="pill" href="assets/Assembly_Representation_Report.pdf">PDF</a></div></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Data -->
+    <section id="data">
+      <div class="container split">
+        <div>
+          <div class="section-head" style="display:block"><div class="kicker">Open data and methods</div><h2>Data</h2><p>Public-interest research should be transparent wherever possible. When sensitive data cannot be fully released, I aim to share documentation, code notes, metadata, visualizations, and methodological explanations.</p></div>
+          <div class="links" style="margin-top:20px"><a class="btn primary" href="https://sabar-institute.github.io/sir/">SIR dataset</a><a class="btn secondary" href="https://sabar-institute.github.io/maps">Maps</a><a class="btn secondary" href="https://sabar-institute.github.io/election2026/roundwise_results/">Roundwise results</a></div>
+        </div>
+        <div class="asset-note">
+          <strong>Methods and data sources</strong>
+          <ul>
+            <li>Administrative records and public PDFs converted to machine-readable data</li>
+            <li>NSS and NFHS unit-level datasets</li>
+            <li>KoboToolBox-based primary surveys</li>
+            <li>STATA, R, Python-based machine learning, and AI-assisted coding workflows</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Media -->
+    <section id="media">
+      <div class="container">
+        <div class="section-head"><div><div class="kicker">Writing and coverage</div><h2>Media and writing</h2></div><p>My own op-eds and articles are listed separately from articles, profiles, and citations by others that discuss my research or data.</p></div>
+
+        <div class="subsection">
+          <h3 class="subsection-title">Op-eds and articles written by me</h3>
+          <div class="writing-grid">
+            <article class="card"><span class="tag">Authored article</span><h3>The Indian Express</h3><p>In India, fire safety remains elusive. Why and how to fix this?</p><div class="links"><a class="pill" href="https://indianexpress.com/article/opinion/columns/india-fire-safety-remains-elusive-why-how-fix-this-9710252/">Read article</a></div></article>
+            <article class="card"><span class="tag">Opinion</span><h3>Deccan Herald</h3><p>SIR redraws Bengal's margins of power.</p><div class="links"><a class="pill" href="https://www.deccanherald.com/opinion/sir-redraws-bengals-margins-of-power-3995060">Read article</a></div></article>
+            <article class="card"><span class="tag">Op-ed</span><h3>The Wire</h3><p>Bulldozers reflect the clash of development and displacement in Bengal.</p><div class="links"><a class="pill" href="#">Read article</a></div></article>
+            <article class="card"><span class="tag">Op-ed</span><h3>The Wire</h3><p>Overpromising and underdelivering: The reality of West Bengal Muslims under TMC rule.</p><div class="links"><a class="pill" href="#">Read article</a></div></article>
+            <article class="card"><span class="tag">Op-ed</span><h3>Nagorik</h3><p>Private cars, traffic congestion, and the idea that roads are for everyone.</p><div class="links"><a class="pill" href="https://nagorik.net/economics/private-cars-increase-traffic-jam-harm-roads-are-for-everyone/">Read article</a></div></article>
+            <article class="card"><span class="tag">Bengali op-ed</span><h3>Ei Samay</h3><p>The logic of statistics and the tale of "intrusion".</p><div class="links"><a class="pill" href="https://eisamay.com/editorial/the-logic-of-statistics-tale-of-intrusion/200414656.cms">Read article</a></div></article>
+            <article class="card"><span class="tag">Bengali op-ed</span><h3>Ei Samay</h3><p>Despite reservations, who are the ones getting government jobs?</p><div class="links"><a class="pill" href="https://eisamay.com/editorial/despite-reservations-who-are-the-ones-getting-government-jobs/200429978.cms">Read article</a></div></article>
+            <article class="card"><span class="tag">Data story</span><h3>The Hindu</h3><p>Minorities have been underrepresented in Bengal Assembly.</p><div class="links"><a class="pill" href="https://www.thehindu.com/data/minorities-have-been-underrepresented-in-bengal-assembly/article70886066.ece">Read article</a></div></article>
+          </div>
+        </div>
+
+        <div class="subsection">
+          <h3 class="subsection-title">Articles, profiles, and citations of my data work</h3>
+          <div class="media-grid">
+            <article class="card"><span class="tag gold">Academic use</span><h3>Debraj Ray working paper</h3><p>My SIR-related electoral data work has been used in Professor Debraj Ray's working paper.</p><div class="links"><a class="pill gold" href="https://debrajray.com///wp-content/uploads/2026/05/SIR2026.pdf">Read paper</a></div></article>
+            <article class="card"><span class="tag gold">Academic mention</span><h3>Dr Subhasish Dey</h3><p>Dr Subhasish Dey of the University of Warwick has mentioned my work in his article.</p><div class="links"><a class="pill gold" href="https://www.4numberplatform.com/?p=41492">Read article</a></div></article>
+            <article class="card"><span class="tag">Profile</span><h3>NewsLaundry</h3><p>Profile of the Sabar team tracking deleted voters in Bengal's SIR process.</p><div class="links"><a class="pill" href="https://www.newslaundry.com/2026/04/12/we-are-chitragupta-of-the-bengal-sir-meet-the-sabar-team-tracking-deleted-voters">Read profile</a></div></article>
+            <article class="card"><span class="tag">Media mention</span><h3>The Telegraph</h3><p>SIR data coverage of the SABAR team's research and analysis.</p><div class="links"><a class="pill" href="https://www.telegraphindia.com/elections/west-bengal-assembly-election-2026/young-team-of-calcuttans-decode-voter-rolls-inside-the-quest-through-sir-data-haze-prnt/cid/2155691">Read coverage</a></div></article>
+            <article class="card"><span class="tag">Media mention</span><h3>Times of India</h3><p>Coverage of third-gender voter exclusions in Bengal's SIR process.</p><div class="links"><a class="pill" href="https://timesofindia.indiatimes.com/city/kolkata/the-other-problem-250-third-genders-fall-in-bengals-sir-gap-set-to-lose-voting-rights/articleshow/127925775.cms">Read coverage</a></div></article>
+            <article class="card"><span class="tag">International feature</span><h3>France 24</h3><p>International coverage related to voter deletions and representation.</p><div class="links"><a class="pill" href="https://www.france24.com/en/tv-shows/focus/20260429-indian-muslims-say-they-re-being-targeted-as-millions-of-voters-deleted-from-rolls">Watch / read</a></div></article>
+            <article class="card"><span class="tag">International coverage</span><h3>CNN</h3><p>Coverage of the West Bengal voter-roll issue and its political implications.</p><div class="links"><a class="pill" href="https://edition.cnn.com/2026/05/01/asia/india-west-bengal-voter-rolls-intl-hnk">Read coverage</a></div></article>
+            <article class="card"><span class="tag">Media mention</span><h3>DW Bengali</h3><p>Coverage of women voters and the SIR process in West Bengal.</p><div class="links"><a class="pill" href="https://www.dw.com/bn/%E0%A6%AA%E0%A6%B6%E0%A7%8D%E0%A6%9A%E0%A6%BF%E0%A6%AE%E0%A6%AC%E0%A6%99%E0%A7%87-%E0%A6%8F%E0%A6%B8%E0%A6%86%E0%A6%87%E0%A6%86%E0%A6%B0%E0%A7%87-%E0%A6%B8%E0%A6%AE%E0%A6%B8%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%AF%E0%A6%BC-%E0%A6%A8%E0%A6%BE%E0%A6%B0%E0%A7%80-%E0%A6%AD%E0%A7%8B%E0%A6%9F%E0%A6%BE%E0%A6%B0%E0%A7%87%E0%A6%B0%E0%A6%BE/a-76892902">Read coverage</a></div></article>
+            <article class="card"><span class="tag">Video interview</span><h3>YouTube interview</h3><p>Discussion related to electoral data and the West Bengal SIR project.</p><div class="links"><a class="pill" href="https://www.youtube.com/watch?v=nT5QGI6FJMQ">Watch interview</a></div></article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CV Preview -->
+    <section id="cv-section">
+      <div class="container">
+        <div class="section-head"><div><div class="kicker">Curriculum Vitae</div><h2>CV</h2></div>
+          <a class="btn primary" href="assets/Ashin_Chakraborty_CV.pdf" download>Download full CV (PDF)</a>
+        </div>
+        <div class="cv-preview">
+          <h3>At a glance</h3>
+          <div class="cv-grid">
+            <div class="cv-block">
+              <h4>Education</h4>
+              <p><strong>MSc Economics</strong> — University of Calcutta, 2023–2025 (First Class)<br>
+              <strong>BSc (Hons) Economics</strong> — University of Calcutta, 2020–2023 (CGPA 8.0)</p>
+            </div>
+            <div class="cv-block">
+              <h4>Current role</h4>
+              <p><strong>Lead, Research Department</strong> — Sabar Institute (March 2025–present)<br>
+              Overseeing data-intensive projects, managing 500+ research interns, presenting to MPs and IAS/WBCS officers.</p>
+            </div>
+            <div class="cv-block">
+              <h4>Skills</h4>
+              <p>R, STATA, Excel, Python ML, KoboToolBox, data visualization, political analysis, psephology, campaign strategy, survey design</p>
+            </div>
+            <div class="cv-block">
+              <h4>Recognition</h4>
+              <p>UGC-NET (99.7 percentile) · GATE · Best Paper Award, St. Xavier's · Champion, Youth Parliament · OpenAI Academy Nonprofit Jam invitee</p>
+            </div>
+          </div>
+          <div style="margin-top:20px; text-align:center;">
+            <a class="btn gold" href="assets/Ashin_Chakraborty_CV.pdf" download>Download full CV</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <div class="container">
+        <div class="section-head" style="display:block">
+          <div class="kicker">Get in Touch</div>
+          <h2>Contact</h2>
+          <p>For academic correspondence, PhD-related conversations, research collaborations, or data-related queries.</p>
+        </div>
+        <div class="contact-grid">
+          <div>
+            <div class="contact-info-cards">
+              <article class="card">
+                <h3>Email</h3>
+                <p><a href="mailto:chakra.ashin@gmail.com">chakra.ashin@gmail.com</a></p>
+              </article>
+              <article class="card">
+                <h3>LinkedIn</h3>
+                <p><a href="https://www.linkedin.com/in/ashin-chakraborty/" target="_blank" rel="noopener">linkedin.com/in/ashin-chakraborty</a></p>
+              </article>
+              <article class="card">
+                <h3>Twitter / X</h3>
+                <p><a href="https://x.com/Ashin_econ" target="_blank" rel="noopener">@Ashin_econ</a></p>
+              </article>
+              <article class="card">
+                <h3>Location</h3>
+                <p>Kolkata, India</p>
+              </article>
+            </div>
+          </div>
+          <div class="contact-form">
+            <h3>Send a message</h3>
+            <form id="contactForm" onsubmit="handleSubmit(event)">
+              <div class="form-group">
+                <label for="cf-name">Your name</label>
+                <input type="text" id="cf-name" name="name" required placeholder="Full name">
+              </div>
+              <div class="form-group">
+                <label for="cf-email">Your email</label>
+                <input type="email" id="cf-email" name="email" required placeholder="you@example.com">
+              </div>
+              <div class="form-group">
+                <label for="cf-subject">Subject</label>
+                <input type="text" id="cf-subject" name="subject" required placeholder="Research collaboration, PhD inquiry, etc.">
+              </div>
+              <div class="form-group">
+                <label for="cf-message">Message</label>
+                <textarea id="cf-message" name="message" required placeholder="Your message..."></textarea>
+              </div>
+              <button type="submit" class="btn primary">Open in your email client</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="footer-brand">Ashin Chakraborty</div>
+        <div class="footer-sub">Economics · Public Policy · Political Economy · Inequality</div>
+      </div>
+      <div class="footer-right">
+        <div class="footer-social">
+          <a href="https://x.com/Ashin_econ" target="_blank" rel="noopener" aria-label="X / Twitter">
+            <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/ashin-chakraborty/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="mailto:chakra.ashin@gmail.com" aria-label="Email">
+            <svg viewBox="0 0 24 24"><path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z"/><path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z"/></svg>
+          </a>
+        </div>
+        <div class="footer-copy">&copy; <span id="year"></span> Ashin Chakraborty</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== SCRIPTS ===== -->
+  <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Theme toggle
+    const themeToggle = document.getElementById('themeToggle');
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'light') {
+      document.documentElement.classList.remove('dark');
+    }
+    themeToggle.addEventListener('click', () => {
+      document.documentElement.classList.toggle('dark');
+      const isDark = document.documentElement.classList.contains('dark');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    });
+
+    // Hamburger menu
+    const hamburger = document.getElementById('hamburger');
+    const mobileNav = document.getElementById('mobileNav');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      mobileNav.classList.toggle('open');
+      document.body.style.overflow = mobileNav.classList.contains('open') ? 'hidden' : '';
+    });
+
+    function closeMobile() {
+      hamburger.classList.remove('open');
+      mobileNav.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    // Active nav link on scroll
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.navlinks a');
+
+    function updateActiveNav() {
+      const scrollY = window.scrollY + 120;
+      let current = '';
+
+      sections.forEach(section => {
+        if (scrollY >= section.offsetTop) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + current) {
+          link.classList.add('active');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', updateActiveNav, { passive: true });
+    updateActiveNav();
+
+    // Contact form → mailto
+    function handleSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('cf-name').value;
+      const email = document.getElementById('cf-email').value;
+      const subject = document.getElementById('cf-subject').value;
+      const message = document.getElementById('cf-message').value;
+      const body = `Hi Ashin,\n\n${message}\n\n— ${name}\n${email}`;
+      window.location.href = `mailto:chakra.ashin@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    }
+
+    // Image fallback
+    document.querySelectorAll('.portrait-frame img').forEach(img => {
+      img.addEventListener('error', function() {
+        this.style.display = 'none';
+        this.nextElementSibling.style.display = 'flex';
+      });
+    });
+  </script>
+</body>
+</html>
